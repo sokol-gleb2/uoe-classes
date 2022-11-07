@@ -1,0 +1,114 @@
+.outer {
+    display: flex;
+    justify-content: center;
+}
+
+.creating-log-in-box {
+    width: 50%;
+    max-width: 500px;
+    min-width: 355px;
+    height: auto;
+    margin: auto;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid blue;
+    border-radius: 10px;
+    top: 25%;
+}
+
+#loginForm {
+    width: 100%;
+}
+
+.signin {
+    animation: 1s sign-init forwards;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: blue;
+    border: 0;
+    color: yellow;
+}
+
+.signin:hover {
+    cursor: pointer;
+    animation: 1s sign forwards;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    border: 0;
+}
+
+@keyframes sign {
+    100% {
+        border: 1px solid blue;
+        background-color: transparent;
+        font-size: 17px;
+        color: blue;
+    }
+}
+
+@keyframes sign-init {
+    0% {
+        border: 1px solid blue;
+        background-color: transparent;
+        font-size: 17px;
+    }
+    100% {
+        background-color: blue;
+        border: 0;
+        font-size: 15px;
+        color: yellow;
+    }
+}
+
+.username_taken {
+    color: red;
+    font-size: 15px;
+
+}
+
+div[problem = 'none'] {
+    display: none;
+}
+
+div[problem = 'username_taken'] {
+    display: block;
+    position: fixed;
+    top: calc(25% - 20px);
+    text-align: center;
+    width: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 0) 0%, transparent 60%);
+}
+
+#name {
+    color: yellow;
+}
+
+#email {
+    color: rgba(255, 255, 0, 0.85);
+}
+
+#Username {
+    color: rgba(255, 255, 0, 0.7);
+}
+
+#Password {
+    color: rgba(0, 0, 255, 0.7);
+}
+
+#repeatPassword {
+    color: rgba(0, 0, 255, 1);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: rgb(247,255,0);
+    background: linear-gradient(0deg, rgba(247,255,0,1) 0%, rgba(46,45,253,1) 100%);
+    height: 100%;
+}
